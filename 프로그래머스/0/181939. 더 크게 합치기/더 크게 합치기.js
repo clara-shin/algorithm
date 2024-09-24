@@ -1,3 +1,3 @@
 function solution(a, b) {
-    return +`${a}${b}` > +`${b}${a}` ? +`${a}${b}` : +`${b}${a}`;
+    return Math.max(+`${a}${b}`,+`${b}${a}`);
 }
