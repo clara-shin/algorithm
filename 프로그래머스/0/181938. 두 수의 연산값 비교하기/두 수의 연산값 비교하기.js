@@ -1,4 +1,6 @@
 function solution(a, b) {
-    if(Number(`${a}${b}`)===2*a*b) return Number(`${a}${b}`);
-    return Math.max(Number(`${a}${b}`), Number(2*a*b))
+    const num1 = Number(`${a}${b}`);
+    const num2 = 2*a*b
+
+    return num1 > num2 ? num1 : num2
 }
