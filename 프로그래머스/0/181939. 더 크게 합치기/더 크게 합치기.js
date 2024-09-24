@@ -1,3 +1,3 @@
 function solution(a, b) {
-    return Math.max(+`${a}${b}`,+`${b}${a}`);
+    return Math.max(Number(`${a}${b}`),Number(`${b}${a}`));
 }
