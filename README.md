@@ -21,4 +21,9 @@ This is an auto push repository for Baekjoon Online Judge created with [Baekjoon
 |  |
 | ------- |
 | [0013-roman-to-integer](https://github.com/clara-shin/algorithm/tree/master/0013-roman-to-integer) |
+| [0014-longest-common-prefix](https://github.com/clara-shin/algorithm/tree/master/0014-longest-common-prefix) |
+## Trie
+|  |
+| ------- |
+| [0014-longest-common-prefix](https://github.com/clara-shin/algorithm/tree/master/0014-longest-common-prefix) |
 <!---LeetCode Topics End-->
