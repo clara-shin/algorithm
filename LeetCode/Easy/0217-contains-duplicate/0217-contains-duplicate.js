@@ -3,11 +3,6 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
-    nums.sort((a,b) => a-b); // 오름차순 정렬
-    for(let i = 0; i < nums.length ; i++){
-        if(nums[i] === nums[i-1]){
-            return true
-        }
-    }
-    return false;
+    const uniqueSet = new Set(nums);
+    return uniqueSet.size < nums.length;
 };
