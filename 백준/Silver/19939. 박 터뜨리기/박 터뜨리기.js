@@ -1,8 +1,6 @@
 const fs = require('fs');
-const input = fs.readFileSync('/dev/stdin').toString().trim().split(' ');
-
-const N = parseInt(input[0]); // 공의 개수
-const K = parseInt(input[1]); // 바구니(팀)의 개수
+const [N, K] = fs.readFileSync('/dev/stdin').toString().trim().split(' ').map(Number);
+// 바구니(팀)의 개수
 
 // 함수: N개의 공을 K개의 바구니에 나눠 담을 수 있는지 확인하고,
 // 가능하다면 가장 많은 공과 가장 적은 공의 개수 차이를 반환
