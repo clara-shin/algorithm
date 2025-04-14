@@ -3,18 +3,19 @@
  * @return {boolean}
  */
 var isPalindrome = function(s) {
-  const str = s.toLowerCase().replace(/[^a-z0-9]/g, ''); // 영숫자만 남기
+  s = s.toLowerCase();
 
-  // 투 포인터
-  let left = 0;
-  let right = str.length - 1;
-
-  while (left < right) {
-    if (str[left] !== str[right]) {
-      return false;
+  let str = ''; // 영숫자만 남길 문자열
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i];
+    // 알파벳이거나 숫자면 str에 추가
+    if ((char >= 'a' && char <= 'z') || (char >= '0' && char <= '9')) {
+      str += char;
     }
-    left++;
-    right--;
   }
-  return true;
+
+  // 문자열 뒤집기
+  let reversedStr = str.split('').reverse().join('');
+
+  return str === reversedStr;
 };
