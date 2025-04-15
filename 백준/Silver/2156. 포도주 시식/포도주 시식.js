@@ -1,10 +1,10 @@
 const fs = require('fs');
-const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
-const n = parseInt(input[0]); 
+const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n').map(Number);
+const n = input[0]; 
 const wines = [0];  
 
 for (let i = 1; i <= n; i++) {
-    wines.push(parseInt(input[i]));
+    wines.push(input[i]);
 }
 
 const dp = Array.from({ length: n + 1 }, () => Array(3).fill(0));
