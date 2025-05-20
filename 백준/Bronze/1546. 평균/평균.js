@@ -1,13 +1,16 @@
 const fs = require('fs');
-const input = fs.readFileSync('/dev/stdin').toString().split('\n');
-let n = Number(input[0]);
-let scores = input[1].split(' ').map(Number);
-let maxValue = scores.reduce((a, b) => Math.max(a, b));
+const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 
-let updated = [];
-for (let i = 0; i < n; i++) {
-  // 수정된 원소 하나씩 저장
-  updated.push((scores[i] / maxValue) * 100);
-}
-//배열에 포함된 원소의 평균 출력
-console.log(updated.reduce((a, b) => a + b) / n);
+const N = Number(input[0]); // 3
+const scores = input[1].split(' ').map(Number); // [40, 80, 60]
+
+const M = Math.max(...scores); // 80
+const newScores = scores.map((score) => (score / M) * 100);
+
+const newAvg =
+  newScores.reduce((acc, curr) => {
+    acc += curr;
+    return acc;
+  }, 0) / N;
+
+console.log(newAvg);
