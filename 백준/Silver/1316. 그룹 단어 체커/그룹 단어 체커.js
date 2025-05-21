@@ -13,10 +13,6 @@ for (let i = 1; i <= n; i++) {
 }
 console.log(summary);
 
-// 그룹문자인지 판별
-// 1. 현재 문자와 그 다음에 올 문자가 달라야 한다
-// 2. 현재문자가 또 있는지 중복검사
-
 function check(data) {
   let setData = new Set(data[0]);
   for (let i = 0; i < data.length - 1; i++) {
